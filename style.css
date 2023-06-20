@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap%22");
+
 .menu {
     display: flex;
     justify-content: center;
@@ -5,7 +7,7 @@
     position: fixed;
     bottom: 0;
     width: 100%;
-    background-color: #1f6807;
+    background-color: #339F5E;
     padding: 10px;
     white-space: nowrap; /* Prevent line breaks */
 }
@@ -15,7 +17,6 @@
     display: flex;
     align-items: center;
     margin-right: 8px;
-    background-color: #1f6807;
     padding: 8px;
     border-radius: 4px;
     flex-shrink: 0; /* Prevent items from shrinking */
@@ -23,13 +24,14 @@
 }
 
 .menu-item.selected {
-    transform: translateY(-15px);
+    transform: translateY(-15px) !important;
 }
 
 .icon {
     margin-right: 4px;
     max-width: 100%; /* Ensure icons don't overflow */
     width: auto; /* Reset width */
+    filter: invert(42);
 }
 
 .rcolor{
@@ -37,20 +39,21 @@
 }
 
 #topbar {
-    background-color: #1f6807;
+    background-color: #339F5E;
     color: white;
     padding: 20px;
-    text-align: center;
+    text-align: center !important;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 700;
   }
 
   .content-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     text-align: center;
     height: 100vh;
     margin-top: 60px; /* Adjust the value as needed */
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
 @media (min-width: 769px) {
@@ -93,5 +96,46 @@
     }
 }
 
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 500px;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 
-
+  a {
+    text-decoration: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 200;
+  }
